@@ -31,8 +31,8 @@ X_test_ = tokenizer.sequences_to_matrix(X_test, mode = 'binary')
 
 model = Sequential()
 model.add(Dense(128, activation = 'relu', input_shape = (n,)))
-#Using dropout to handle overfitting if the model
-#This creates an ensemble network
+#Using dropout to handle overfitting of the model
+  #This creates an ensemble network
 model.add(Dropout(0.2))
 model.add(Dense(128, activation = 'relu'))
 model.add(Dense(46, activation = 'softmax'))
